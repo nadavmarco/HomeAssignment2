@@ -3,11 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Home - Nadav Marco Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="global.js" defer></script>
 </head>
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+
+  <header>
+    <nav>
+      <div class="mobile-menu">☰</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project-calculator.html">Project Calculator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="assets/profile-picture.JPG" alt="Portrait of Nadav Marco">
+      <h1>Nadav Marco</h1>
+      <p>Full-Stack Web Developer & UX Enthusiast</p>
+      <a href="assets/resume.pdf" target="_blank">View My Resume</a>
+    </section>
+
+    <section class="call-to-action">
+      <div class="cta-left">
+        <h2>Contact Me</h2>
+        <p>📞 <a href="tel:0527502055">052-750-2055</a></p>
+        <p>✉️ <a href="mailto:nadavma23@gmail.com">nadavma23@gmail.com</a></p>
+        <p>🔗 <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a></p>
+      </div>
+
+      <div class="cta-right">
+        <h2>Featured Project: SEOUL CITY</h2>
+        <img src="assets/Flag_of_South_Korea.svg.png" alt="Screenshot of Seoul City project">
+        <p>This website is a simple personal homepage created as part of an assignment. It features a clean design with a main introduction section, basic navigation links, and brief personal details about the creator. The site demonstrates fundamental HTML and CSS skills, focusing on layout and basic web design principles.</p>
+        <a href="https://nadavmarco.github.io/Home-assignement-1/" target="_blank">View Project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nadav Marco. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
