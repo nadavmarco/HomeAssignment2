@@ -115,26 +115,52 @@ html, body {
     transform: scale(1.05);
   }
   
-  /* Media Queries */
   @media (max-width: 767px) {
     nav {
       justify-content: space-between;
+      padding: 15px 20px;
     }
     nav ul {
       display: none;
       flex-direction: column;
-      gap: 10px;
       align-items: center;
       width: 100%;
       background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
-      padding: 10px 0;
+      margin: 0;
+      padding: 15px 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
       border-radius: 0 0 15px 15px;
-      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
     }
+  
     nav ul.show {
       display: flex;
+      max-height: 500px; 
+      opacity: 1;
     }
+  
+    nav ul li {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+    
     .mobile-menu {
       display: block;
+      cursor: pointer;
+      font-size: 28px;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+  
+    .mobile-menu:active {
+      transform: scale(1.1);
     }
   }
+  

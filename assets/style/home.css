@@ -1,6 +1,5 @@
 main {
   padding: 100px 20px 40px;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -48,16 +47,4 @@ main {
 
 .call-to-action > div:hover {
   transform: translateY(-10px);
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .call-to-action {
-    flex-direction: column;
-    align-items: center;
-  }
-  .call-to-action > div {
-    flex: 1 1 100%;
-    margin: 10px 0;
-  }
 }
