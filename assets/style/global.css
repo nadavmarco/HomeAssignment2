@@ -121,8 +121,7 @@ body.dark-mode main {
 a:hover {
     color: var(--link-hover-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-  
+} 
 #toggle-dark-mode {
   padding: 8px 12px;
   font-size: 16px;
@@ -199,5 +198,45 @@ a:hover {
       padding: 8px 12px;
       font-size: 12px; 
   }
+ 
+  }
+  @media (max-width: 767px) {
+    .calculator-content {
+      width: 90%; 
+      margin: 20px auto;
+      padding: 20px;
+    }
+  
+    #priceForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; 
+    }
+  
+    select, input[type="number"], input[type="radio"] {
+      width: 100%;
+    }
+  
+    #result {
+      font-size: 16px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calculator-content {
+      padding: 15px; 
+    }
+  
+    #priceForm {
+      gap: 10px;
+    }
+  
+    #result {
+      font-size: 14px;
+    }
+  
+    #toggle-dark-mode {
+      font-size: 18px; 
+    }
   }
   

@@ -1,13 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Quote Calculator</title>
+  <title>Nadav Marco Portfolio</title>
+  <link rel="stylesheet" href="/assets/style/global.css">
+  <link rel="stylesheet" href="assets/style/calcualtor.css">
+  <script src="services/calculator.js" defer></script>
+  <script src="services/global.js" defer></script>
+  
 </head>
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <header>
+    <nav>
+      <div class="mobile-menu">☰</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project-calculator.html" class="active" >Project Calculator</a></li>
+      </ul>
+      <button id="toggle-dark-mode">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calculator-content">
+      <h1>Project Price Calculator</h1>
+      <form id="priceForm">
+        <label for="siteType">Select site type:</label>
+        <select id="siteType" name="siteType">
+          <option value="business">Business Site</option>
+          <option value="store">Online Store</option>
+          <option value="blog">Blog</option>
+        </select>
+
+        <label for="numPages">Number of pages (1-10):</label>
+        <input type="number" id="numPages" name="numPages" min="1" max="10">
+
+        <p>Custom design needed?</p>
+        <label><input type="radio" name="customDesign" value="yes"> Yes</label>
+        <label><input type="radio" name="customDesign" value="no"> No</label>
+
+        <div class="form-buttons">
+          <button type="reset">Reset</button>
+          <button type="button" id="calculateBtn">Calculate Price</button>
+        </div>
+
+        <div id="result"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nadav Marco. All rights reserved.</p>
+  </footer>
 </body>
 </html>

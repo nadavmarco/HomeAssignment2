@@ -1,0 +1,53 @@
+.calculator-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+
+    }
+main {
+    padding: 100px 20px 240px;
+  }
+
+
+
+#priceForm {
+    position: relative; 
+}
+
+#result {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    min-height: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px; /* תוספת מרווח */
+}
+@media (max-width: 480px) {
+    .calculator-content {
+      padding: 15px; 
+    }
+  
+    #priceForm {
+      gap: 10px;
+    }
+  
+    #result {
+      font-size: 14px;
+    }
+  
+    #toggle-dark-mode {
+      font-size: 18px; 
+    }
+    
+
+    }
