@@ -12,7 +12,7 @@ html, body {
     --accent-color: #a0522d;
     --accent-color-light: #cd853f;
     --accent-color-dark: #8b4513;
-    --link-color:  #8b5a2b;
+    --link-color:  #ffb070;
     --link-hover-color: white;
 }
 body.dark-mode main {
@@ -26,7 +26,7 @@ body.dark-mode main {
     --accent-color: #5fadd2;
     --accent-color-light: #327ac0;
     --accent-color-dark: #74baec;
-    --link-color: #5fadd2;
+    --link-color: #0066cc;
     --link-hover-color: #0a1725;
   }
   h1, h2, h3 {
