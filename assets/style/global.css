@@ -6,6 +6,20 @@ html, body {
     color: var(--text-color);
   }
   body.dark-mode {
+    --primary-bg: #5e3c23;
+    --secondary-bg: #3b2a1a;
+    --text-color: #f5e8da;
+    --accent-color: #a0522d;
+    --accent-color-light: #cd853f;
+    --accent-color-dark: #8b4513;
+    --link-color:  #8b5a2b;
+    --link-hover-color: white;
+}
+body.dark-mode main {
+  background-color: var(--primary-bg); 
+  color: var(--text-color); 
+}
+  :root {
     --primary-bg: #a1c3dc;
     --secondary-bg: #c4d5e5;
     --text-color: #0a1725;
@@ -14,19 +28,6 @@ html, body {
     --accent-color-dark: #74baec;
     --link-color: #5fadd2;
     --link-hover-color: #0a1725;
-}
-body.dark-mode main {
-  background-color: var(--primary-bg); 
-  color: var(--text-color); 
-}
-  :root {
-    --primary-bg: #5e3c23;
-    --secondary-bg: #3b2a1a;
-    --text-color: #f5e8da;
-    --accent-color: #a0522d;
-    --accent-color-light: #cd853f;
-    --accent-color-dark: #8b4513;
-    --link-color:  #8b5a2b;
   }
   h1, h2, h3 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
