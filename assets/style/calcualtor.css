@@ -121,17 +121,24 @@ button.reset {
 button.reset:hover {
   background: linear-gradient(135deg, #ff7043, #ffab91);
 }
-
-
-#priceForm input[type="radio"] {
-  margin-right: 10px;
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  margin-top: 8px;
 }
 
-#priceForm label[for="yes"], #priceForm label[for="no"] {
-  display: inline-block;
-  margin-right: 15px;
+.radio-group label {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   font-weight: normal;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 8px; 
+  accent-color: black;
+  transform: scale(1.2); 
 }
 
 
