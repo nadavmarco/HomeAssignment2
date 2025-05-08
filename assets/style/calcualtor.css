@@ -55,7 +55,7 @@ input[type="radio"] {
   font-weight: bold;
 }
 
-
+/* === Result box === */
 #result {
   margin-top: 25px;
   padding: 20px;
