@@ -1,11 +1,14 @@
+@import url('variables.css');
+
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--primary-bg);
     color: var(--text-color);
-  }
-  body.dark-mode {
+}
+
+body.dark-mode {
     --primary-bg: #5e3c23;
     --secondary-bg: #3b2a1a;
     --text-color: #f5e8da;
@@ -15,11 +18,13 @@ html, body {
     --link-color:  #ffb070;
     --link-hover-color: white;
 }
+
 body.dark-mode main {
-  background-color: var(--primary-bg); 
-  color: var(--text-color); 
+    background-color: var(--primary-bg);
+    color: var(--text-color);
 }
-  :root {
+
+:root {
     --primary-bg: #a1c3dc;
     --secondary-bg: #c4d5e5;
     --text-color: #0a1725;
@@ -28,16 +33,18 @@ body.dark-mode main {
     --accent-color-dark: #74baec;
     --link-color: #0066cc;
     --link-hover-color: #0a1725;
-  }
-  h1, h2, h3 {
+}
+
+h1, h2, h3 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     color: var(--text-color);
-  }
-  h1 { font-size: 42px; }
-  h2 { font-size: 30px; }
-  h3 { font-size: 20px; }
-  
-  nav {
+}
+
+h1 { font-size: 42px; }
+h2 { font-size: 30px; }
+h3 { font-size: 20px; }
+
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,18 +58,18 @@ body.dark-mode main {
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
     padding: 0;
     margin: 0;
     align-items: center;
-  }
-  
-  nav a {
+}
+
+nav a {
     text-decoration: none;
     color: var(--text-color);
     padding: 12px 20px;
@@ -72,48 +79,46 @@ body.dark-mode main {
     letter-spacing: 0.5px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     color: var(--text-color);
     background: var(--accent-color-dark);
     transform: translateY(-3px) scale(1.08);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
-  
-  nav a.active {
+
+nav a.active {
     font-weight: bold;
     border: 2px solid #fff;
     background: var(--accent-color-dark);
     color: #fff;
     cursor: default;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .mobile-menu {
+}
+
+.mobile-menu {
     display: none;
     font-size: 30px;
     cursor: pointer;
     padding: 0 20px;
     color: var(--text-color);
-  }
-  
-  footer {
+}
+
+footer {
     background: var(--secondary-bg);
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0;
     color: var(--text-color);
     text-align: center;
-    
-  }
-  
-  a {
+}
+
+a {
     color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -122,122 +127,125 @@ body.dark-mode main {
 a:hover {
     color: var(--link-hover-color);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} 
+}
+
 #toggle-dark-mode {
-  padding: 8px 12px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  margin-left: 20px; /* מרווח קטן */
+    padding: 8px 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    margin-left: 20px; /* מרווח קטן */
 }
 
 #toggle-dark-mode:hover {
-  background: var(--accent-color-dark);
-  color: #fff;
-  transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: var(--accent-color-dark);
+    color: #fff;
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-  
-  @media (max-width: 767px) {
+
+@media (max-width: 767px) {
     nav {
-      justify-content: space-between;
-      padding: 15px 20px;
+        justify-content: space-between;
+        padding: 15px 20px;
     }
+
     nav ul {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
-      margin: 0;
-      padding: 15px 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
+        margin: 0;
+        padding: 15px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
     }
-  
+
     nav ul.show {
-      display: flex;
-      max-height: 500px; 
-      opacity: 1;
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
     }
-  
+
     nav ul li {
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
     }
-    
+
     .mobile-menu {
-      display: block;
-      cursor: pointer;
-      font-size: 28px;
-      user-select: none;
-      transition: transform 0.3s ease;
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        user-select: none;
+        transition: transform 0.3s ease;
     }
-  
+
     .mobile-menu:active {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
+
     nav {
-      justify-content: space-between;
-      padding: 15px 15px;
+        justify-content: space-between;
+        padding: 15px 15px;
     }
+
     #toggle-dark-mode {
-      margin-left: auto;
-      padding: 8px 12px;
-      font-size: 12px; 
-  }
- 
-  }
-  @media (max-width: 767px) {
+        margin-left: auto;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
     .calculator-content {
-      width: 90%; 
-      margin: 20px auto;
-      padding: 20px;
+        width: 90%;
+        background-color: var(--secondary-bg);
+        margin: 20px auto;
+        padding: 20px;
     }
-  
+
     #priceForm {
-      display: flex;
-      flex-direction: column;
-      gap: 15px; 
+        gap: 15px;
     }
-  
+
     select, input[type="number"], input[type="radio"] {
-      width: 100%;
+        width: 100%;
+        background-color: var(--primary-bg);
     }
-  
+
     #result {
-      font-size: 16px; 
+        font-size: 16px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .calculator-content {
-      padding: 15px; 
+        padding: 15px;
     }
-  
+
     #priceForm {
-      gap: 10px;
+        gap: 10px;
     }
-  
+
     #result {
-      font-size: 14px;
+        font-size: 14px;
     }
-  
+
     #toggle-dark-mode {
-      font-size: 18px; 
+        font-size: 18px;
     }
-  }
-  
+}

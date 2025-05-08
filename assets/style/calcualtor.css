@@ -1,47 +1,151 @@
-.calculator-content {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: var(--secondary-bg);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid #333;
 
-    }
-main {
-    padding: 100px 20px 265px;
-  }
-#priceForm {
-    position: relative; 
+.calculator-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--secondary-bg);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
 }
+
+main {
+  padding: 100px 20px 265px;
+}
+
+#priceForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#priceForm label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  accent-color:black;
+  transform: scale(1.2);
+}
+
+#priceForm p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
 
 #result {
-    margin-top: 25px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--text-color);
-    min-height: 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: background 0.3s ease, color 0.3s ease;
-    margin-bottom: 20px; /* תוספת מרווח */
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+  min-height: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-bottom: 20px;
 }
+
+#result.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff5252;
+}
+
+#result.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4caf50, red);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+button.calculate {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+button.calculate:hover {
+  background: linear-gradient(135deg, #66bb6a, #99d68e);
+}
+
+button.reset {
+  background: linear-gradient(135deg, #ff5733, #ff8f66);
+}
+
+button.reset:hover {
+  background: linear-gradient(135deg, #ff7043, #ffab91);
+}
+
+
+#priceForm input[type="radio"] {
+  margin-right: 10px;
+}
+
+#priceForm label[for="yes"], #priceForm label[for="no"] {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+
 @media (max-width: 480px) {
-    .calculator-content {
-      padding: 15px; 
-    }
-    #priceForm {
-      gap: 10px;
-    }
-  
-    #result {
+  .calculator-content {
+      padding: 15px;
+  }
+  #priceForm label {
+      margin-bottom: 12px;
+  }
+  #result {
       font-size: 14px;
-    }
-  
-    #toggle-dark-mode {
-      font-size: 18px; 
-    }
-    }
+  }
+  #toggle-dark-mode {
+      font-size: 18px;
+  }
+}

@@ -1,14 +1,19 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('priceForm');
     const calculateBtn = document.getElementById('calculateBtn');
     const result = document.getElementById('result');
+
+    form.addEventListener('reset', () => {
+        result.textContent = '';
+    });
 
     calculateBtn.addEventListener('click', () => {
         const siteType = document.getElementById('siteType').value;
         const numPages = parseInt(document.getElementById('numPages').value);
         const customDesign = document.querySelector('input[name="customDesign"]:checked');
 
-        if (!numPages || !customDesign) {
+
+        if (!siteType || isNaN(numPages) || numPages < 1 || numPages > 10 || !customDesign) {
             result.textContent = 'Please fill out all fields correctly.';
             return;
         }
