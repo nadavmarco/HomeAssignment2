@@ -8,7 +8,7 @@ html, body {
     color: var(--text-color);
 }
 
-body.dark-mode {
+/* body.dark-mode {
     --primary-bg: #5e3c23;
     --secondary-bg: #3b2a1a;
     --text-color: #f5e8da;
@@ -17,14 +17,14 @@ body.dark-mode {
     --accent-color-dark: #8b4513;
     --link-color:  #ffb070;
     --link-hover-color: white;
-}
+} */
 
 body.dark-mode main {
     background-color: var(--primary-bg);
     color: var(--text-color);
 }
 
-:root {
+/* :root {
     --primary-bg: #a1c3dc;
     --secondary-bg: #c4d5e5;
     --text-color: #0a1725;
@@ -33,7 +33,7 @@ body.dark-mode main {
     --accent-color-dark: #74baec;
     --link-color: #0066cc;
     --link-hover-color: #0a1725;
-}
+} */
 
 h1, h2, h3 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -45,6 +45,7 @@ h2 { font-size: 30px; }
 h3 { font-size: 20px; }
 
 nav {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -248,4 +249,12 @@ a:hover {
     #toggle-dark-mode {
         font-size: 18px;
     }
+    .radio-group {
+        flex-direction: column; 
+        align-items: flex-start;
+      }
+      .radio-group label {
+        font-size: 14px; 
+      }
+      
 }
